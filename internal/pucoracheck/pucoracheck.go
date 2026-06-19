@@ -1,4 +1,4 @@
-package velocheck
+package pucoracheck
 
 import (
 	"fmt"

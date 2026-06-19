@@ -11,7 +11,7 @@ import (
 	"github.com/pucora/pucora-configurator/internal/generator"
 	"github.com/pucora/pucora-configurator/internal/presets"
 	"github.com/pucora/pucora-configurator/internal/profile"
-	"github.com/pucora/pucora-configurator/internal/velocheck"
+	"github.com/pucora/pucora-configurator/internal/pucoracheck"
 	"github.com/pucora/pucora-configurator/internal/wizard"
 )
 
@@ -125,7 +125,7 @@ var generateCmd = &cobra.Command{
 		}
 
 		if runCheck {
-			res, err := velocheck.Run(filepath.Join(outputDir, "pucora.json"))
+			res, err := pucoracheck.Run(filepath.Join(outputDir, "pucora.json"))
 			if err != nil {
 				return err
 			}
